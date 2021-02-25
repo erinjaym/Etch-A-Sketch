@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(12, 11, 11);
+  color: rgb(232, 229, 236);
+}
+
+.etch {
+  width: 31.25px;
+  height: 31.25px;
+  background-color: grey;
+  border: 2px solid black;
+}
+
+.container {
+  background-color: rgb(91, 112, 124);
+  display: grid;
+  grid-template: repeat(1, auto) / repeat(16, auto); 
+  grid-auto-flow: row;
+}
+
+.screen {
+width: 500px;
+height: 500px;
+}
