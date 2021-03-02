@@ -4,18 +4,9 @@ body {
 }
 
 .etch {
-  width: 31.25px;
-  height: 31.25px;
+  width: 0;
+  height: 0;
   background-color: grey;
-  border: 2px solid black;
-}
-
-
-.etch:hover {
-  width: 31.25px;
-  height: 31.25px;
-  background-color: blue;
-  border: 2px solid rgb(28, 6, 128);
 }
 
 .sketch {
@@ -30,6 +21,6 @@ border: 2px solid blue;
   height: 500px;
   background-color: rgb(91, 112, 124);
   display: grid;
-  grid-template: repeat(1, auto) / repeat(16, auto); 
+  grid-gap: 0px;
   grid-auto-flow: row;
 }

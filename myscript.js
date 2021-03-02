@@ -1,15 +1,22 @@
 
 const container = document.getElementById("container");
-createGrid (); // for start button later
 
-//create 16 x 16 grid
-function createGrid () {
-    for (columns=0; columns<16; columns++){
 
-        for (rows =0; rows<16; rows++){
+ createGrid (16);
+
+
+function createGrid (numberOf) {
+    
+    for (columns=0; columns< numberOf; columns++){
+
+        for (rows =0; rows< numberOf; rows++){
             const container = document.querySelector('#container');
+            container.style.gridTemplate = `repeat( ${numberOf} , 1fr) / repeat(${numberOf},  1fr)`; 
             const tile = document.createElement('div');
-            tile.className = "etch";
+            tile.classList.add("etch"); 
+            tile.style.width = 500 / numberOf;
+            tile.style.height = 500 / numberOf; 
+            console.log(500 / numberOf);
             container.appendChild(tile);
         }
     } 
@@ -49,12 +56,11 @@ var newSize = prompt("How Many squares per side? (up to 100", "16");
         alert("wicked");
         document.getElementById('container').style.height = "700px";
         document.getElementById('container').style.width = "700px";
+        // Need to create a new grid with ..> etch size = container size / etch number
+        // have to make create grid variable fed 
     }
 
 
-//document.getElementById('container').style.height = "700px";
-//
-// change grid size but not pixel size ? 
 }
 
 
