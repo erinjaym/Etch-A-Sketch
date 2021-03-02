@@ -10,14 +10,26 @@ body {
   border: 2px solid black;
 }
 
+
+.etch:hover {
+  width: 31.25px;
+  height: 31.25px;
+  background-color: blue;
+  border: 2px solid rgb(28, 6, 128);
+}
+
+.sketch {
+width: 31.25px;
+height: 31.25px;
+background-color: blue;
+border: 2px solid blue;
+}
+
 .container {
+  width: 500px;
+  height: 500px;
   background-color: rgb(91, 112, 124);
   display: grid;
   grid-template: repeat(1, auto) / repeat(16, auto); 
   grid-auto-flow: row;
-}
-
-.screen {
-width: 500px;
-height: 500px;
 }
