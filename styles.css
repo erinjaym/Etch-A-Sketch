@@ -1,20 +1,18 @@
-body {
-  background-color: rgb(12, 11, 11);
+body{
+  background: rgb(23, 6, 29);
   color: rgb(232, 229, 236);
+}
+
+.title {
+  color: #8f8996;
+  text-shadow: 0 0 3px #a70303, 0 0 5px #0000ffd0;
 }
 
 .etch {
   width: 0;
   height: 0;
-  background-color: grey;
+  background-color: #8f8996;
   border: solid 1px black;
-}
-
-.sketch {
-width: 31.25px;
-height: 31.25px;
-background-color: blue;
-border: 2px solid blue;
 }
 
 .container {
@@ -24,4 +22,34 @@ border: 2px solid blue;
   display: grid;
   grid-gap: 0px;
   grid-auto-flow: row;
+
+  position:fixed;
+  z-index: 100;  
+  top:30%;  
+  left:40%;  
+  margin:-100px 0 0 -100px;  
+
 }
+
+.button {
+  background-color: #8f8996;
+  border: none;
+  color: rgb(20, 19, 19);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.centered {  
+  position:fixed;
+  z-index: 100;  
+  top:50%;  
+  left:50%;  
+  margin:-100px 0 0 -100px;  
+  width:200px;  
+  height:200px;  
+}  

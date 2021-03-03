@@ -3,8 +3,7 @@ const container = document.querySelector('#container');
 
 
 
-createGrid(40);
-//create grid
+createGrid(16); // page load grid
 function createGrid (numberOf) {
     
     for (columns=0; columns< numberOf; columns++){
@@ -21,15 +20,14 @@ function createGrid (numberOf) {
    
 }
 
-drawThings();
-function drawThings (){
-    //Create list of all the etch tiles
+activateDrawing(); //for initial grid
+function activateDrawing (){
     const tilesList = document.getElementsByClassName('etch');
     let tileCount = tilesList.length;
 
     for (let tile = 0; tile < tileCount; tile++) {
         tilesList[tile].addEventListener("mouseenter", function(event){
-        event.target.style.background = "blue";
+        event.target.style.background = randomColor();
         })
     }
 }
@@ -39,25 +37,24 @@ function cleanTiles (){
     let tileCount = tilesList.length;
 
     for (let tile = 0; tile < tileCount; tile++) {
-        tilesList[tile].style.background = "grey";
+        tilesList[tile].style.background = "#8f8996";
         }
 }
 
 
 function resize (){
-var newNumber = prompt("How Many squares per side? (up to 100)");
+var newNumber = prompt("How Many squares per side? (pick a number 1 - 100)");
 
     if (newNumber == 100){
         alert("Please enter a number under 100");
     }
     else if (newNumber < 1) {
-        alert("Please enter a larger number");
+        alert("Please enter a number above 0");
     }
     else {
-        alert("wicked");
         eraseGrid();
         createGrid(newNumber);
-        drawThings();
+        activateDrawing();
     }
 
 
@@ -69,6 +66,14 @@ const parent = document.querySelector('#container');
     while (parent.firstChild){
         parent.removeChild(parent.firstChild);
     }
+}
+
+// ranomizes and spits out a color
+function randomColor() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    return Color = "rgb(" + x + "," + y + "," + z + ")";
 }
 
 function toggleColor () {
